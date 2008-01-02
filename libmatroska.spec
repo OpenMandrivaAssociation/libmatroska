@@ -13,6 +13,7 @@ License:        GPL/QPL
 Group:		System/Libraries
 URL:            http://www.matroska.org/
 Source0:        http://dl.matroska.org/downloads/libmatroska/%name-%version.tar.bz2
+BuildRoot:      %_tmppath/%name-buildroot
 BuildRequires:  libebml-devel >= %ebmlver
 
 %description
