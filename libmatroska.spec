@@ -8,13 +8,13 @@
 Summary:        Matroska Audio/Video file format library
 Name:           %name
 Version:        %version
-Release: %mkrel 1
+Release:	%mkrel 2
 License:        GPL/QPL
 Group:		System/Libraries
 URL:            http://www.matroska.org/
 Source0:        http://dl.matroska.org/downloads/libmatroska/%name-%version.tar.bz2
-BuildRoot:      %_tmppath/%name-buildroot
 BuildRequires:  libebml-devel >= %ebmlver
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 In short, matroska is a new Audio/Video file format. It is an advanced
