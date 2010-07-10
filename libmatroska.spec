@@ -1,14 +1,14 @@
 %define name    libmatroska
-%define version 0.8.1
-%define ebmlver 0.7.6
-%define libname %mklibname matroska 0
-#fixed2
-%{?!mkrel:%define mkrel(c:) %{-c: 0.%{-c*}.}%{!?_with_unstable:%(perl -e '$_="%{1}";m/(.\*\\D\+)?(\\d+)$/;$rel=${2}-1;re;print "$1$rel";').%{?subrel:%subrel}%{!?subrel:1}.%{?distversion:%distversion}%{?!distversion:%(echo $[%{mdkversion}/10])}}%{?_with_unstable:%{1}}%{?distsuffix:%distsuffix}%{?!distsuffix:mdk}}
+%define version 1.0.0
+%define ebmlver 1.0.0
+%define major 2
+%define libname %mklibname matroska %major
+%define develname %mklibname -d matroska
 
 Summary:        Matroska Audio/Video file format library
 Name:           %name
 Version:        %version
-Release:	%mkrel 2
+Release:	%mkrel 1
 License:        GPL/QPL
 Group:		System/Libraries
 URL:            http://www.matroska.org/
@@ -46,14 +46,14 @@ protection, tagging, file attachement, control track (to be defined),
 menu (to be defined), etc. All these features are not yet implemented
 but already defined in the format.
 
-%package -n %libname-devel
+%package -n %develname
 Group: Development/C++
 Summary: Matroska Audio/Video file format headers and static library
 Requires: %libname = %version
 Provides: libmatroska-devel = %version-%release
-Obsoletes: libmatroska-devel
+Obsoletes: %mklibname -d matroska 0
 
-%description -n %libname-devel
+%description -n %develname
 In short, matroska is a new Audio/Video file format. It is an advanced
 and full featured format.
 
@@ -95,9 +95,9 @@ rm -rf %buildroot
 
 %files -n %libname
 %defattr(-,root,root)
-%_libdir/lib*.so.*
+%_libdir/lib*.so.%{major}*
 
-%files -n %libname-devel
+%files -n %develname
 %defattr(-,root,root)
 %doc LICENSE*
 %{_includedir}/matroska
