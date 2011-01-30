@@ -1,14 +1,14 @@
 %define name    libmatroska
-%define version 1.0.0
-%define ebmlver 1.0.0
-%define major 2
+%define version 1.1.0
+%define ebmlver 1.2.0
+%define major 3
 %define libname %mklibname matroska %major
 %define develname %mklibname -d matroska
 
 Summary:        Matroska Audio/Video file format library
 Name:           %name
 Version:        %version
-Release:	%mkrel 2
+Release:	%mkrel 1
 License:        GPL/QPL
 Group:		System/Libraries
 URL:            http://www.matroska.org/
@@ -75,8 +75,7 @@ chmod 644 LICENSE*
 
 %build
 cd make/linux
-%make
-
+%make CXX="g++ %optflags %ldflags"
 
 %install
 rm -rf %buildroot
