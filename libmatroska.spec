@@ -8,7 +8,7 @@
 Summary:        Matroska Audio/Video file format library
 Name:           %name
 Version:        %version
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:        GPL/QPL
 Group:		System/Libraries
 URL:            http://www.matroska.org/
