@@ -1,7 +1,7 @@
 %define name    libmatroska
-%define version 1.1.0
-%define ebmlver 1.2.0
-%define major 3
+%define version 1.2.0
+%define ebmlver 1.2.1
+%define major 4
 %define libname %mklibname matroska %major
 %define develname %mklibname -d matroska
 
