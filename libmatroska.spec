@@ -8,8 +8,8 @@
 
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
-Version:	1.4.0
-Release:	2
+Version:	1.4.1
+Release:	1
 License:	GPLv2/QPL
 Group:		System/Libraries
 Url:		http://www.matroska.org/
@@ -60,10 +60,10 @@ for development with Matroska.
 %setup -q
 
 %build
-%make -C make/linux CXX="g++ %{optflags} %{ldflags}"
+%make -C make/linux CXX="%{__cxx} %{optflags} %{ldflags}" prefix=%{_prefix} targets="sharedlib"
 
 %install
-%makeinstall_std -C make/linux prefix=%{buildroot}/%{_prefix} libdir=%{buildroot}/%{_libdir}
+%makeinstall_std -C make/linux prefix="%{_prefix}" libdir="%{_libdir}" targets="sharedlib" includedir=%{_prefix}/include/matroska
 
 rm -f %{buildroot}%{_libdir}/*.a
 
@@ -74,4 +74,3 @@ rm -f %{buildroot}%{_libdir}/*.a
 %doc LICENSE*
 %{_includedir}/matroska
 %{_libdir}/lib*.so
-
