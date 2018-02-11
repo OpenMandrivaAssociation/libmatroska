@@ -75,3 +75,4 @@ rm -f %{buildroot}%{_libdir}/*.a
 %doc LICENSE*
 %{_includedir}/matroska
 %{_libdir}/lib*.so
+%{_libdir}/pkgconfig/*.pc
