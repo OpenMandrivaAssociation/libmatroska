@@ -2,18 +2,18 @@
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
-%define major	6
+%define major 6
 %define libname %mklibname matroska %{major}
 %define devname %mklibname -d matroska
 
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
-Version:	1.4.1
-Release:	12
+Version:	1.4.8
+Release:	1
 License:	GPLv2/QPL
 Group:		System/Libraries
 Url:		http://www.matroska.org/
-Source0:	http://dl.matroska.org/downloads/libmatroska/%{name}-%{version}.tar.bz2
+Source0:	http://dl.matroska.org/downloads/libmatroska/%{name}-%{version}.tar.xz
 BuildRequires:	libebml-devel
 
 %description
@@ -49,8 +49,8 @@ but already defined in the format.
 %package -n %{devname}
 Group:		Development/C++
 Summary:	Matroska Audio/Video file format headers and static library
-Requires:	%{libname} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{devname}
 This package contains the C++ headers and the static library needed
@@ -60,6 +60,7 @@ for development with Matroska.
 %setup -q
 
 %build
+%setup_compile_flags
 %make -C make/linux CXX="%{__cxx} %{optflags} %{ldflags}" prefix=%{_prefix} targets="sharedlib"
 
 %install
