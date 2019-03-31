@@ -14,7 +14,8 @@ License:	GPLv2/QPL
 Group:		System/Libraries
 Url:		http://www.matroska.org/
 Source0:	http://dl.matroska.org/downloads/libmatroska/%{name}-%{version}.tar.xz
-BuildRequires:	pkgconfig(libebml)
+BuildRequires:	pkgconfig(libebml) >= 1.3.7
+BuildRequires:  cmake
 
 %description
 In short, matroska is a new Audio/Video file format. It is an advanced
@@ -60,11 +61,11 @@ for development with Matroska.
 %setup -q
 
 %build
-%configure
+%cmake
 %make_build
 
 %install
-%make_install
+%make_install -C build
 
 rm -f %{buildroot}%{_libdir}/*.a
 
