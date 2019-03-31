@@ -8,8 +8,8 @@
 
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
-Version:	1.4.8
-Release:	3
+Version:	1.5.0
+Release:	1
 License:	GPLv2/QPL
 Group:		System/Libraries
 Url:		http://www.matroska.org/
@@ -61,10 +61,10 @@ for development with Matroska.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 rm -f %{buildroot}%{_libdir}/*.a
 
