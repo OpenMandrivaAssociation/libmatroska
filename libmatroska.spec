@@ -76,5 +76,5 @@ rm -f %{buildroot}%{_libdir}/*.a
 %doc LICENSE*
 %{_includedir}/matroska
 %{_libdir}/lib*.so
-%{_libdir}/cmake/matroska/
+#{_libdir}/cmake/matroska/
 %{_libdir}/pkgconfig/*.pc
