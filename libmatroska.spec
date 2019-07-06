@@ -8,13 +8,13 @@
 
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
-Version:	1.5.0
+Version:	1.5.2
 Release:	1
 License:	GPLv2/QPL
 Group:		System/Libraries
 Url:		http://www.matroska.org/
 Source0:	http://dl.matroska.org/downloads/libmatroska/%{name}-%{version}.tar.xz
-BuildRequires:	pkgconfig(libebml) >= 1.3.7
+BuildRequires:	pkgconfig(libebml) >= 1.3.8
 BuildRequires:  cmake
 
 %description
