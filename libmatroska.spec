@@ -2,13 +2,13 @@
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
-%define major 6
+%define major 7
 %define libname %mklibname matroska %{major}
 %define devname %mklibname -d matroska
 
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
-Version:	1.5.2
+Version:	1.6.0
 Release:	1
 License:	GPLv2/QPL
 Group:		System/Libraries
