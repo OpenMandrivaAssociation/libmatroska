@@ -8,7 +8,7 @@
 
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
-Version:	1.6.2
+Version:	1.6.3
 Release:	1
 License:	GPLv2/QPL
 Group:		System/Libraries
