@@ -1,7 +1,3 @@
-# For some reasons library is unstripped and we don't have time for investigation
-%define _enable_debug_packages %{nil}
-%define debug_package %{nil}
-
 %define major 7
 %define libname %mklibname matroska %{major}
 %define devname %mklibname -d matroska
@@ -9,7 +5,7 @@
 Summary:	Matroska Audio/Video file format library
 Name:		libmatroska
 Version:	1.6.3
-Release:	1
+Release:	2
 License:	GPLv2/QPL
 Group:		System/Libraries
 Url:		http://www.matroska.org/
@@ -58,7 +54,7 @@ This package contains the C++ headers and the static library needed
 for development with Matroska.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %cmake
