@@ -8,7 +8,7 @@ Version:	1.7.1
 Release:	2
 License:	GPLv2/QPL
 Group:		System/Libraries
-Url:		http://www.matroska.org/
+Url:		https://www.matroska.org/
 Source0:	http://dl.matroska.org/downloads/libmatroska/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libebml) >= 1.4.4
 BuildRequires:  cmake
