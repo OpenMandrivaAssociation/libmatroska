@@ -12,6 +12,7 @@ Url:		https://www.matroska.org/
 Source0:	http://dl.matroska.org/downloads/libmatroska/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libebml) >= 1.4.7
 BuildRequires:  cmake
+BuildRequires:  make
 
 %description
 In short, matroska is a new Audio/Video file format. It is an advanced
